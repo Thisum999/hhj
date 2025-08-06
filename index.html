@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ultimate Giveaway | iPhones, MacBooks & More!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin: 0.8rem 0;
+    }
+
+    .claim-btn {
+      display: inline-block;
+      background: #28a745;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .claim-btn:hover {
+      background: #218838;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+<header>
+  <h1>🎉 Win Premium Electronics! 🎁</h1>
+  <p>Claim iPhones, MacBooks, Samsung & More – While Stock Lasts!</p>
+  <p style="color: red; font-weight: bold; margin-top: 10px;">
+    ⚠️ Attention: You must click at least <u>3 times</u> to claim your offer!
+  </p>
+</header>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="card">
+      <img src="https://i5.walmartimages.com/seo/Apple-iPhone-13-Pro-Max-5G-smartphone-dual-SIM-Internal-Memory-256-GB-OLED-display-6-7-2778-x-1284-pixels-120-Hz-3x-rear-cameras-12-MP-12-MP-12-MP-fr_52cd848a-3ef9-4e1e-8291-d317e85d6018.0105daa2bd2459eba68d65adf7cd8bf7.jpeg" alt="iPhone 13 Pro" width="50%" height="200%">
+      <h3>iPhone 13 Pro 512GB Blue</h3>
+      <a href="#" class="claim-btn" onclick="claim(this, 'https://youroffersite.com/iphone13')">Claim Now</a>
+    </div>
+
+    <div class="card">
+      <img src="https://i5.walmartimages.com/seo/Pre-Owned-Samsung-Galaxy-S22-Ultra-5G-S908U-512GB-T-Mobile-Cellphone-Refurbished-Like-New_b634729c-d383-4923-908b-6de85816bced.4eed28e7834b5409da4de1b12fee1605.jpeg" alt="Samsung Galaxy S22">
+      <h3>Samsung Galaxy S22 Ultra</h3>
+      <a href="#" class="claim-btn" onclick="claim(this, 'https://youroffersite.com/galaxys22')">Claim Now</a>
+    </div>
+
+    <div class="card">
+      <img src="https://i0.wp.com/pcmarket.ci/up/2023/09/MacBook-Pro-A2020-A2251-Core-i5-10th-Gen.jpg?fit=830%2C830&ssl=1" alt="MacBook Pro">
+      <h3>MacBook Pro M2</h3>
+      <a href="#" class="claim-btn" onclick="claim(this, 'https://youroffersite.com/macbookpro')">Claim Now</a>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsCg8GCfbfXtW1B1AXmH6x066OW6ruFX620A&s" alt="Sony Headphones">
+      <h3>Sony WH-1000XM5</h3>
+      <a href="#" class="claim-btn" onclick="claim(this, 'https://youroffersite.com/sonyheadphones')">Claim Now</a>
+    </div>
+
+<div class="card">
+      <img src="https://www.courtsmammouth.mu/89093-product_set/vivo-v27-magic-blue.jpg
+" alt="Sony Headphones">
+      <h3>Vivo v27 Magic</h3>
+      <a href="#" class="claim-btn" onclick="claim(this, 'https://youroffersite.com/sonyheadphones')">Claim Now</a>
+    </div>
+
+<div class="card">
+      <img src="https://alephksa.com/cdn/shop/files/Apple_Watch_Ultra_2_LTE_49mm_Titanium_Beige_Orange_Trail_Loop_PDP_Image_Position-1__en-ME_93102161-7a15-4d9c-9a82-486715d2f01e.jpg?v=1698991384
+" alt="Sony Headphones">
+      <h3>Apple Watch Ultra</h3>
+      <a href="#" class="claim-btn" onclick="claim(this, 'https://youroffersite.com/sonyheadphones')">Claim Now</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 SuperGiveaways. All rights reserved.
+  </footer>
+
+  <script>
+    const clickCount = {};
+
+    function claim(el, realLink) {
+      const product = realLink;
+      clickCount[product] = (clickCount[product] || 0) + 1;
+
+      const adsettraLink = "https://www.profitableratecpm.com/he6vmv86?key=e5f8467daae1e708c1687f4a953b1145"; // replace with your actual Adsettra link
+
+      if (clickCount[product] < 3) {
+        window.location.href = adsettraLink;
+      } else {
+        window.location.href = realLink;
+      }
+    }
+  </script>
+
+</body>
+</html>
